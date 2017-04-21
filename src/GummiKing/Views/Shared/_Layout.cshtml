@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" type="text/css" href="~/css/styles.css" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div>
+        <div class="bar">Get Free US Ground Shipping on All Orders +$75 when you checkout with SENDSWEETS</div>
+        <div class="container">
+            <div class="main-nav">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/">
+                        <span class="icon-logo">Gummi Kingdom</span>
+                    </a>
+                </div>
+                <ul class="menu-primary-nav">
+                    <li>
+                        <a href="/products">Products</a>
+                    </li>
+                    <li>
+                        <a href="/about">About</a>
+                    </li>
+                    <li>
+                        <a href="/locations">Locations</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <hr class="line"/>
+        @RenderBody()
+    </div>
+</body>
+</html>

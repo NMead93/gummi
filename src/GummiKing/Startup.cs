@@ -27,6 +27,7 @@ namespace GummiKing
         }
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddMvc();
             services.AddEntityFramework()
                 .AddDbContext<GummiContext>(options =>
                     options.UseSqlServer(Configuration["ConnectionStrings:DefaultConnection"]));
@@ -36,6 +37,13 @@ namespace GummiKing
         public void Configure(IApplicationBuilder app)
         {
 
+            app.UseStaticFiles();
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute(
+                    name: "default",
+                    template: "{controller=Home}/{action=Index}/{id?}");
+            });
 
             app.Run(async (context) =>
             {
