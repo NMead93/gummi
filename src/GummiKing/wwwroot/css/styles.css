@@ -36,3 +36,19 @@ a {
 .line {
     border-color: #91D7E6;
 }
+
+.gummi-list li {
+    width: 32%;
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+}
+
+.gummi-image {
+    position: relative;
+}
+
+img {
+    max-width: 100%;
+    width: 100%;
+}

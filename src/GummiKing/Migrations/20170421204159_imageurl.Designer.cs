@@ -8,9 +8,10 @@ using GummiKing.Models;
 namespace GummiKing.Migrations
 {
     [DbContext(typeof(GummiContext))]
-    partial class GummiContextModelSnapshot : ModelSnapshot
+    [Migration("20170421204159_imageurl")]
+    partial class imageurl
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.0.0-rtm-21431")

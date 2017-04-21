@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Gummi Kingdom";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model IEnumerable<GummiKing.Models.Product>
+
+<div class="category-products container">
+    @foreach(var product in Model)
+    {
+        <ul class="gummi-list">
+            <li>
+                <a href="@Url.Action("Details", "Products", new { id = product.ProductId })" >
+                    <div class="gummi-image">
+                        <img src="@product.ImageUrl" />
+                    </div>
+                    <div class="gummi-name">
+                        <p>@product.Name</p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    }
+</div>
