@@ -16,7 +16,7 @@ namespace GummiKing.Controllers
         private GummiContext db = new GummiContext();
         public IActionResult Index()
         {
-            return View(db.Products.ToList());
+            return View(db.Products.Include(products => products.Country).ToList());
         }
 
         public IActionResult Create()
