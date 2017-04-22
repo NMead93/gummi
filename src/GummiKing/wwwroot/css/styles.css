@@ -37,6 +37,7 @@ a {
     border-color: #91D7E6;
 }
 
+
 .gummi-list li {
     width: 100%;
     display: inline-block;
@@ -50,5 +51,4 @@ a {
 
 img {
     max-width: 100%;
-    width: 100%;
 }

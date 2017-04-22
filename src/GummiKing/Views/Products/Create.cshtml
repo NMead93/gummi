@@ -2,3 +2,32 @@
     ViewData["Title"] = "Gummi Kingdom";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
+@model GummiKing.Models.Product
+
+<h2>Add a new Product</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(model => model.Name)
+    @Html.EditorFor(model => model.Name)
+
+    <hr class="line" />
+
+    @Html.LabelFor(model => model.Cost)
+    @Html.EditorFor(model => model.Cost)
+
+    <hr class="line" />
+
+    @Html.LabelFor(model => model.ImageUrl)
+    @Html.EditorFor(model => model.ImageUrl)
+
+    <hr class="line" />
+
+    @Html.LabelFor(model => model.CountryId)
+    @Html.DropDownList("CountryId")
+
+    <input type="submit" value="Create" class="btn btn-info" />
+}
+
+@Html.ActionLink("Back to Product List", "Index")
