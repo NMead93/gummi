@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Gummi Kingdom";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model GummiKing.Models.Product
+
+<div class="container">
+    <div class="col-md-6 detail-pic">
+        <img src="@Model.ImageUrl" />
+    </div>
+    <div class="col-md-6 detail-info">
+        <div class="detail-name">
+            <p>@Model.Name</p>
+        </div>
+        <div class="detail-country">
+            <p>Imported From @Model.Country.Name</p>
+        </div>
+        <hr />
+        <div class="detail-description">
+            <p>Lorem Ipsum blah blah blah</p>
+        </div>
+        <div class="detail-admin">
+            @Html.ActionLink("Edit", "Edit", new { id = Model.ProductId }) | @Html.ActionLink("Delete", "Delete", new { id = Model.ProductId })
+        </div>
+    </div>
+</div>
