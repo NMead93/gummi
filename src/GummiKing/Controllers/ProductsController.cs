@@ -26,6 +26,19 @@ namespace GummiKing.Controllers
             return View(thisProduct);
         }
 
+        public IActionResult Country()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Country(Country country)
+        {
+            db.Countries.Add(country);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
         public IActionResult Create()
         {
             ViewBag.CountryId = new SelectList(db.Countries, "CountryId", "Name");
